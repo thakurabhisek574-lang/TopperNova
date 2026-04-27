@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 3 - All Topics</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #000; color: #fff; font-family: 'Segoe UI', Arial, sans-serif; }
+
+        /* FIXED HEADER - AS PER PHOTO 2 */
+        .header { 
+            position: fixed; top: 0; width: 100%; z-index: 1000; 
+            background: #000; border-bottom: 2px solid #00d4ff;
+            display: flex; justify-content: space-between; align-items: center; 
+            padding: 15px 20px; box-shadow: 0 5px 15px rgba(0, 212, 255, 0.4);
+        }
+        .back-btn { 
+            text-decoration: none; color: #00d4ff; font-weight: bold; 
+            border: 2px solid #00d4ff; padding: 8px 22px; border-radius: 8px;
+            font-size: 1.1rem; text-transform: uppercase; 
+        }
+        .brand { text-align: right; line-height: 1.2; }
+        .brand .smart { color: #00d4ff; font-size: 0.9rem; font-weight: bold; display: block; }
+        .brand .toppers { color: #fff; font-size: 1.5rem; font-weight: 900; text-shadow: 0 0 10px #fff; }
+
+        /* CONTENT AREA */
+        .container { padding: 110px 15px 30px; }
+
+        /* TOPIC CARD - FULL DETAILS */
+        .topic-card {
+            background: #0a0a0a; border: 2.5px solid #00d4ff; border-radius: 20px;
+            padding: 25px 20px; margin-bottom: 45px;
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.2);
+        }
+
+        .topic-title { 
+            color: #00d4ff; font-size: 2.2rem; font-weight: 900;
+            text-align: center; margin-bottom: 20px; 
+            text-shadow: 0 0 15px #00d4ff; text-transform: uppercase;
+        }
+
+        .eng-def { 
+            font-size: 1.3rem; line-height: 1.5; color: #f0f0f0; 
+            margin-bottom: 25px; border-left: 5px solid #fff; padding-left: 15px;
+        }
+
+        /* FORMULA BOX */
+        .formula-box {
+            border: 3px solid #fff; border-radius: 15px;
+            padding: 20px; width: 95%; margin: 0 auto 25px;
+            text-align: center; background: #000;
+            box-shadow: 0 0 25px #00d4ff;
+        }
+        .formula-text { color: #00d4ff; font-size: 2.5rem; font-weight: bold; display: flex; align-items: center; justify-content: center; }
+        
+        .frac { display: inline-block; vertical-align: middle; text-align: center; margin: 0 10px; }
+        .num { display: block; border-bottom: 3px solid #00d4ff; padding: 0 5px; }
+        .den { display: block; padding: 0 5px; }
+
+        /* HINDI EXPLAIN */
+        .hindi-explain {
+            background: #111; padding: 18px; border-radius: 12px;
+            border-top: 2px solid #00d4ff;
+        }
+        .hindi-explain p { color: #00d4ff; font-size: 1.3rem; font-style: italic; line-height: 1.5; }
+        .hindi-explain b { color: #fff; font-style: normal; font-size: 1.4rem; }
+
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <a href="phy-chapters.html" class="back-btn">BACK</a>
+        <div class="brand">
+            <span class="smart">SMART STUDY</span>
+            <span class="toppers">FOR TOPPERS</span>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <div class="topic-card">
+            <div class="topic-title">1. Electric Current</div>
+            <div class="eng-def">It is defined as the total amount of electric charge flowing through any cross-section of a conductor per unit time.</div>
+            <div class="formula-box">
+                <span class="formula-text">I = <div class="frac"><span class="num">Q</span><span class="den">t</span></div></span>
+            </div>
+            <div class="hindi-explain"><p><b>Samjho:</b> Kisi wire mein ek second mein kitna charge flow hota hai, wahi current hai.</p></div>
+        </div>
+
+        <div class="topic-card">
+            <div class="topic-title">2. Direction of Current</div>
+            <div class="eng-def">The direction of electric current is taken as the direction of flow of positive charges.</div>
+            <div class="formula-box">
+                <span class="formula-text">Positive &rarr; Negative</span>
+            </div>
+            <div class="hindi-explain"><p><b>Samjho:</b> Current hamesha high potential (plus) se low potential (minus) ki taraf jata hai.</p></div>
+        </div>
+
+        <div class="topic-card">
+            <div class="topic-title">3. Conventional Current</div>
+            <div class="eng-def">It is the current whose direction is opposite to the direction of flow of electrons.</div>
+            <div class="formula-box">
+                <span class="formula-text">I<sub>conv</sub> &prop; - (e<sup>-</sup> flow)</span>
+            </div>
+            <div class="hindi-explain"><p><b>Samjho:</b> Electrons jis taraf jaate hain, current uske bilkul ulti disha mein mana jata hai.</p></div>
+        </div>
+
+        <div class="topic-card">
+            <div class="topic-title">4. Drift of Electrons</div>
+            <div class="eng-def">The slow and steady motion of free electrons towards the positive end of a conductor in an electric field.</div>
+            <div class="formula-box">
+                <span class="formula-text">Electron Movement</span>
+            </div>
+            <div class="hindi-explain"><p><b>Samjho:</b> Field ki wajah se electrons ka thoda-thoda khisakna 'Drift' kehlata hai.</p></div>
+        </div>
+
+        <div class="topic-card">
+            <div class="topic-title">5. Drift Velocity</div>
+            <div class="eng-def">The average velocity with which free electrons get drifted towards the positive terminal.</div>
+            <div class="formula-box">
+                <span class="formula-text">v<sub>d</sub> = <div class="frac"><span class="num">e E &tau;</span><span class="den">m</span></div></span>
+            </div>
+            <div class="hindi-explain"><p><b>Samjho:</b> Wo average speed jis se electrons plus terminal ki taraf bhagte hain.</p></div>
+        </div>
+
+        <div class="topic-card">
+            <div class="topic-title">6. Current Density</div>
+            <div class="eng-def">It is the amount of current flowing per unit area of cross-section of a conductor. It is a vector.</div>
+            <div class="formula-box">
+                <span class="formula-text">J = <div class="frac"><span class="num">I</span><span class="den">A</span></div></span>
+            </div>
+            <div class="hindi-explain"><p><b>Samjho:</b> Wire ke har ek chote hisse (area) mein kitna current bhara hua hai.</p></div>
+        </div>
+
+        <div class="topic-card">
+            <div class="topic-title">7. Relation: Current & Density</div>
+            <div class="eng-def">The total current is the dot product of current density and the area vector.</div>
+            <div class="formula-box">
+                <span class="formula-text">I = J A cos&theta;</span>
+            </div>
+            <div class="hindi-explain"><p><b>Samjho:</b> Current density aur area ko multiply karne par humein total Current milta hai.</p></div>
+        </div>
+
+        <div class="topic-card">
+            <div class="topic-title">8. Ohm's Law</div>
+            <div class="eng-def">Current flowing through a conductor is directly proportional to the potential difference across it.</div>
+            <div class="formula-box">
+                <span class="formula-text">V = I R</span>
+            </div>
+            <div class="hindi-explain"><p><b>Samjho:</b> Jitna zyada dhakka (V) doge, utna tezz electrons (I) daudenge.</p></div>
+        </div>
+
+        <div class="topic-card">
+            <div class="topic-title">9. V-I Characteristics</div>
+            <div class="eng-def">The graph between potential difference (V) and current (I). For conductors, it is a straight line.</div>
+            <div class="formula-box">
+                <span class="formula-text">Slope = R</span>
+            </div>
+            <div class="hindi-explain"><p><b>Samjho:</b> Ye graph batata hai ki Voltage badhane par Current kaise badh raha hai.</p></div>
+        </div>
+
+        <div class="topic-card">
+            <div class="topic-title">10. Ohmic Conductors</div>
+            <div class="eng-def">Those conductors which strictly obey Ohm's law (e.g., metals like Silver, Copper).</div>
+            <div class="formula-box">
+                <span class="formula-text">V &prop; I (Linear)</span>
+            </div>
+            <div class="hindi-explain"><p><b>Samjho:</b> Wo cheezein jo Ohm ke niyam ko poori tarah manti hain.</p></div>
+        </div>
+
+        <div class="topic-card">
+            <div class="topic-title">11. Non-Ohmic Conductors</div>
+            <div class="eng-def">Those conductors which do not obey Ohm's law (e.g., Diode, Transistor, Electrolytes).</div>
+            <div class="formula-box">
+                <span class="formula-text">V &ne; I R (Non-Linear)</span>
+            </div>
+            <div class="hindi-explain"><p><b>Samjho:</b> Wo cheezein jo Ohm ki baat nahi sunti, inka graph tedha-medha hota hai.</p></div>
+        </div>
+
+    </div>
+<div class="section-tag" style="color: #00d4ff; font-size: 1.5rem; font-weight: bold; margin: 20px 0; text-transform: uppercase; border-left: 4px solid #fff; padding-left: 10px;">Resistance Section</div>
+
+<div class="topic-card">
+    <div class="topic-title">1. Resistance</div>
+    <div class="eng-def">The opposition offered by a conductor to the flow of electric current through it.</div>
+    <div class="formula-box">
+        <span class="formula-text">R = <div class="frac"><span class="num">V</span><span class="den">I</span></div></span>
+    </div>
+    <div class="hindi-explain"><p><b>Samjho:</b> Current ke raste mein aane wali rukawat ko hi resistance kehte hain.</p></div>
+</div>
+
+<div class="topic-card">
+    <div class="topic-title">2. Factors Affecting Resistance</div>
+    <div class="eng-def">Resistance depends on length (L), area (A), nature of material, and temperature.</div>
+    <div class="hindi-explain"><p><b>Samjho:</b> Wire kitni lambi hai, kitni moti hai aur kis cheez ki bani hai, in sabse resistance badalta hai.</p></div>
+</div>
+
+<div class="topic-card">
+    <div class="topic-title">3. Resistivity (&rho;)</div>
+    <div class="eng-def">It is the resistance of a conductor of unit length and unit area of cross-section.</div>
+    <div class="formula-box">
+        <span class="formula-text">&rho; = <div class="frac"><span class="num">R A</span><span class="den">L</span></div></span>
+    </div>
+    <div class="hindi-explain"><p><b>Samjho:</b> Ye material ki asli property hai, jo sirf material ke type aur temperature par depend karti hai.</p></div>
+</div>
+
+<div class="topic-card">
+    <div class="topic-title">4. Conductivity (&sigma;)</div>
+    <div class="eng-def">The reciprocal of resistivity is called conductivity. It shows how easily current flows.</div>
+    <div class="formula-box">
+        <span class="formula-text">&sigma; = <div class="frac"><span class="num">1</span><span class="den">&rho;</span></div></span>
+    </div>
+    <div class="hindi-explain"><p><b>Samjho:</b> Ye resistivity ka dushman (ulta) hai. Jitni zyada conductivity, utna makkhan current flow hoga.</p></div>
+</div>
+
+<div class="topic-card">
+    <div class="topic-title">5. Relation: R = &rho;L/A</div>
+    <div class="eng-def">Formula connecting Resistance with length, area, and resistivity of the material.</div>
+    <div class="formula-box">
+        <span class="formula-text">R = &rho; <div class="frac"><span class="num">L</span><span class="den">A</span></div></span>
+    </div>
+    <div class="hindi-explain"><p><b>Samjho:</b> Wire lambi toh Resistance zyada, wire moti toh Resistance kam.</p></div>
+</div>
+
+<div class="section-tag" style="color: #00d4ff; font-size: 1.5rem; font-weight: bold; margin: 20px 0; text-transform: uppercase; border-left: 4px solid #fff; padding-left: 10px;">Temperature Dependence</div>
+
+<div class="topic-card">
+    <div class="topic-title">6. Temp. Dependence of Resistance</div>
+    <div class="eng-def">For metals, resistance increases with temperature. For semiconductors, it decreases.</div>
+    <div class="hindi-explain"><p><b>Samjho:</b> Garmi badhne par atoms zyada vibrate karte hain, isliye electrons ko nikalne mein dikkat hoti hai.</p></div>
+</div>
+
+<div class="topic-card">
+    <div class="topic-title">7. Temp. Coefficient of Resistance (&alpha;)</div>
+    <div class="eng-def">Fractional change in resistance per unit change in temperature.</div>
+    <div class="formula-box">
+        <span class="formula-text">R<sub>t</sub> = R<sub>o</sub>(1 + &alpha;&Delta;t)</span>
+    </div>
+    <div class="hindi-explain"><p><b>Samjho:</b> Ye &alpha; batata hai ki temperature badhne se resistance kitni speed se badhega.</p></div>
+</div>
+
+<div class="section-tag" style="color: #00d4ff; font-size: 1.5rem; font-weight: bold; margin: 20px 0; text-transform: uppercase; border-left: 4px solid #fff; padding-left: 10px;">Electrical Energy & Power</div>
+
+<div class="topic-card">
+    <div class="topic-title">8. Electrical Energy</div>
+    <div class="eng-def">The total work done by the source in maintaining the current in the circuit.</div>
+    <div class="formula-box">
+        <span class="formula-text">W = V I t = I<sup>2</sup> R t</span>
+    </div>
+    <div class="hindi-explain"><p><b>Samjho:</b> Battery ne poore time mein kitni energy kharch ki load chalane mein.</p></div>
+</div>
+
+<div class="topic-card">
+    <div class="topic-title">9. Electric Power</div>
+    <div class="eng-def">The rate at which electrical energy is dissipated or consumed in an electric circuit.</div>
+    <div class="formula-box">
+        <span class="formula-text">P = <div class="frac"><span class="num">W</span><span class="den">t</span></div></span>
+    </div>
+    <div class="hindi-explain"><p><b>Samjho:</b> Ek second mein kitni bijli khayi ja rahi hai, wahi power hai.</p></div>
+</div>
+
+<div class="topic-card">
+    <div class="topic-title">10. Power Formula (P = VI)</div>
+    <div class="eng-def">Power is the product of potential difference and the current.</div>
+    <div class="formula-box">
+        <span class="formula-text">P = V &times; I</span>
+    </div>
+    <div class="hindi-explain"><p><b>Samjho:</b> Voltage aur Current ka mel hi Power hai.</p></div>
+</div>
+
+<div class="topic-card">
+    <div class="topic-title">11. Power in terms of R and V</div>
+    <div class="eng-def">Power dissipated across a resistor of resistance R at voltage V.</div>
+    <div class="formula-box">
+        <span class="formula-text">P = <div class="frac"><span class="num">V<sup>2</sup></span><span class="den">R</span></div></span>
+    </div>
+    <div class="hindi-explain"><p><b>Samjho:</b> Agar humein resistance aur voltage pata ho, toh hum isse power nikal sakte hain.</p></div>
+</div>
+<div class="section-tag" style="color: #00d4ff; font-size: 1.5rem; font-weight: bold; margin: 20px 0; text-transform: uppercase; border-left: 4px solid #fff; padding-left: 10px;">EMF and Potential Difference</div>
+
+<div class="topic-card">
+    <div class="topic-title">1. Electromotive Force (EMF)</div>
+    <div class="eng-def">EMF is the maximum potential difference between the electrodes of a cell when no current is drawn from it.</div>
+    <div class="formula-box">
+        <span class="formula-text">E = <div class="frac"><span class="num">W</span><span class="den">q</span></div></span>
+    </div>
+    <div class="hindi-explain"><p><b>Samjho:</b> Ye battery ki asli taqat hai jab tak wo kisi circuit se judi na ho.</p></div>
+</div>
+
+<div class="topic-card">
+    <div class="topic-title">2. Potential Difference (V)</div>
+    <div class="eng-def">The difference of electrical potential between two points in a circuit when current is flowing.</div>
+    <div class="formula-box">
+        <span class="formula-text">V = I &times; R</span>
+    </div>
+    <div class="hindi-explain"><p><b>Samjho:</b> Jab battery kaam kar rahi hoti hai, tab jo voltage milta hai use PD kehte hain.</p></div>
+</div>
+
+<div class="topic-card">
+    <div class="topic-title">3. EMF vs Potential Difference</div>
+    <div class="eng-def">EMF is independent of circuit resistance, while PD depends on the resistance between two points.</div>
+    <div class="hindi-explain"><p><b>Samjho:</b> EMF hamesha PD se bada hota hai (jab battery discharge ho rahi ho).</p></div>
+</div>
+
+<div class="section-tag" style="color: #00d4ff; font-size: 1.5rem; font-weight: bold; margin: 20px 0; text-transform: uppercase; border-left: 4px solid #fff; padding-left: 10px;">Internal Resistance</div>
+
+<div class="topic-card">
+    <div class="topic-title">4. Internal Resistance of Cell (r)</div>
+    <div class="eng-def">The opposition offered by the electrolyte of a cell to the flow of current inside it.</div>
+    <div class="formula-box">
+        <span class="formula-text">r = <div class="frac"><span class="num">E - V</span><span class="den">I</span></div></span>
+    </div>
+    <div class="hindi-explain"><p><b>Samjho:</b> Battery ke andar ka chemical jo current ko rokta hai, wahi internal resistance hai.</p></div>
+</div>
+
+<div class="topic-card">
+    <div class="topic-title">5. Factors Affecting r</div>
+    <div class="eng-def">It depends on distance between electrodes, area of electrodes, and concentration of electrolyte.</div>
+    <div class="hindi-explain"><p><b>Samjho:</b> Plate kitni door hain aur chemical kitna gaadha hai, isse 'r' badalta hai.</p></div>
+</div>
+
+<div class="topic-card">
+    <div class="topic-title">6. Terminal Voltage</div>
+    <div class="eng-def">The potential difference across the terminals of a cell when current is being drawn from it.</div>
+    <div class="formula-box">
+        <span class="formula-text">V = E - I r</span>
+    </div>
+    <div class="hindi-explain"><p><b>Samjho:</b> Battery se nikalne ke baad jo final voltage humein bahar milta hai.</p></div>
+</div>
+
+<div class="section-tag" style="color: #00d4ff; font-size: 1.5rem; font-weight: bold; margin: 20px 0; text-transform: uppercase; border-left: 4px solid #fff; padding-left: 10px;">Cells and Batteries</div>
+
+<div class="topic-card">
+    <div class="topic-title">7. Primary Cells</div>
+    <div class="eng-def">Cells in which chemical reactions are irreversible. They cannot be recharged.</div>
+    <div class="hindi-explain"><p><b>Samjho:</b> Use and throw wale cells, jaise remote ka cell.</p></div>
+</div>
+
+<div class="topic-card">
+    <div class="topic-title">8. Secondary Cells</div>
+    <div class="eng-def">Cells in which chemical reactions are reversible. They can be recharged and used again.</div>
+    <div class="hindi-explain"><p><b>Samjho:</b> Rechargeable cells, jaise mobile ki battery ya inverter ki battery.</p></div>
+</div>
+
+<div class="topic-card">
+    <div class="topic-title">9. Cells in Series</div>
+    <div class="eng-def">Cells are connected end-to-end to increase the total voltage of the combination.</div>
+    <div class="formula-box">
+        <span class="formula-text">E<sub>total</sub> = n E</span>
+    </div>
+    <div class="hindi-explain"><p><b>Samjho:</b> Jab zyada voltage chahiye ho, toh cells ko ek ke piche ek lagate hain.</p></div>
+</div>
+
+<div class="topic-card">
+    <div class="topic-title">10. Cells in Parallel</div>
+    <div class="eng-def">Cells are connected side-by-side to increase the current capacity.</div>
+    <div class="formula-box">
+        <span class="formula-text">I<sub>max</sub> = <div class="frac"><span class="num">E</span><span class="den">R + r/n</span></div></span>
+    </div>
+    <div class="hindi-explain"><p><b>Samjho:</b> Jab zyada der tak current chahiye ho, toh cells ko parallel mein lagate hain.</p></div>
+</div>
+<div class="section-tag" style="color: #00d4ff; font-size: 1.5rem; font-weight: bold; margin: 20px 0; text-transform: uppercase; border-left: 4px solid #fff; padding-left: 10px;">Kirchhoff's Laws</div>
+
+<div class="topic-card">
+    <div class="topic-title">1. Kirchhoff’s First Law (Junction Rule)</div>
+    <div class="eng-def">The algebraic sum of currents meeting at any junction in an electric circuit is zero. It is based on the law of conservation of charge.</div>
+    <div class="formula-box">
+        <span class="formula-text">&sum; I = 0</span>
+    </div>
+    <div class="hindi-explain"><p><b>Samjho:</b> Kisi point (junction) par jitna current aayega, utna hi wahan se bahar jayega.</p></div>
+</div>
+
+<div class="topic-card">
+    <div class="topic-title">2. Kirchhoff’s Second Law (Loop Rule)</div>
+    <div class="eng-def">The algebraic sum of changes in potential around any closed loop is zero. It is based on the law of conservation of energy.</div>
+    <div class="formula-box">
+        <span class="formula-text">&sum; &Delta;V = 0</span>
+    </div>
+    <div class="hindi-explain"><p><b>Samjho:</b> Ek band raste (loop) mein saare voltages ka total sum hamesha zero hota hai.</p></div>
+</div>
+
+<div class="section-tag" style="color: #00d4ff; font-size: 1.5rem; font-weight: bold; margin: 20px 0; text-transform: uppercase; border-left: 4px solid #fff; padding-left: 10px;">Wheatstone Bridge</div>
+
+<div class="topic-card">
+    <div class="topic-title">3. Wheatstone Bridge</div>
+    <div class="eng-def">An arrangement of four resistances used to determine one unknown resistance accurately.</div>
+    <div class="hindi-explain"><p><b>Samjho:</b> Ye 4 resistances ka ek network hai jisse hum kisi anjaan resistance ki value nikalte hain.</p></div>
+</div>
+
+<div class="topic-card">
+    <div class="topic-title">4. Balanced Condition</div>
+    <div class="eng-def">In a balanced bridge, the potential at junctions B and D is equal, so no current flows through the galvanometer.</div>
+    <div class="formula-box">
+        <span class="formula-text"><div class="frac"><span class="num">P</span><span class="den">Q</span></div> = <div class="frac"><span class="num">R</span><span class="den">S</span></div></span>
+    </div>
+    <div class="hindi-explain"><p><b>Samjho:</b> Jab galvanometer zero dikhaye, tab bridge balance hota hai aur ye formula lagta hai.</p></div>
+</div>
+
+<div class="topic-card">
+    <div class="topic-title">5. Applications of Wheatstone Bridge</div>
+    <div class="eng-def">Used in Meter Bridge, Post Office Box, and to measure strain or temperature changes via resistance.</div>
+    <div class="hindi-explain"><p><b>Samjho:</b> Iska sabse bada use unknown resistance nikalne ke devices banane mein hota hai.</p></div>
+</div>
+
+<div class="section-tag" style="color: #00d4ff; font-size: 1.5rem; font-weight: bold; margin: 20px 0; text-transform: uppercase; border-left: 40px solid #fff; padding-left: 10px;">Meter Bridge</div>
+
+<div class="topic-card">
+    <div class="topic-title">6. Meter Bridge</div>
+    <div class="eng-def">It is the practical form of Wheatstone Bridge used to find the resistance of a wire. It has a 1-meter long uniform wire.</div>
+    <div class="hindi-explain"><p><b>Samjho:</b> Lab mein use hone wala device jo 1 meter lambi wire par chalta hai.</p></div>
+</div>
+
+<div class="topic-card">
+    <div class="topic-title">7. Principle of Meter Bridge</div>
+    <div class="eng-def">It works on the principle of balanced Wheatstone Bridge.</div>
+    <div class="hindi-explain"><p><b>Samjho:</b> Ye bilkul Wheatstone Bridge ke rule par hi kaam karta hai.</p></div>
+</div>
+
+<div class="topic-card">
+    <div class="topic-title">8. Determination of Unknown Resistance</div>
+    <div class="eng-def">Finding unknown resistance (S) using the balance length (l) on the meter bridge wire.</div>
+    <div class="formula-box">
+        <span class="formula-text">S = <div class="frac"><span class="num">R (100 - l)</span><span class="den">l</span></div></span>
+    </div>
+    <div class="hindi-explain"><p><b>Samjho:</b> Jockey ko wire par khiskayo, jahan balance mile wahan se ye formula lagakar 'S' nikal lo.</p></div>
+</div>
+<div class="section-tag" style="color: #00d4ff; font-size: 1.5rem; font-weight: bold; margin: 20px 0; text-transform: uppercase; border-left: 4px solid #fff; padding-left: 10px;">Potentiometer</div>
+
+<div class="topic-card">
+    <div class="topic-title">1. Potentiometer</div>
+    <div class="eng-def">A device used to measure EMF or potential difference accurately without drawing any current from the source.</div>
+    <div class="hindi-explain"><p><b>Samjho:</b> Ye ek "ideal voltmeter" ki tarah kaam karta hai kyunki ye battery se bilkul current nahi leta.</p></div>
+</div>
+
+<div class="topic-card">
+    <div class="topic-title">2. Principle of Potentiometer</div>
+    <div class="eng-def">The potential drop across any portion of the wire is directly proportional to the length of that portion ($V \propto l$).</div>
+    <div class="formula-box">
+        <span class="formula-text">V = k l</span>
+    </div>
+    <div class="hindi-explain"><p><b>Samjho:</b> Wire jitni lambi hogi, uspe voltage drop bhi utna hi zyada hoga.</p></div>
+</div>
+
+<div class="topic-card">
+    <div class="topic-title">3. Potential Gradient (k)</div>
+    <div class="eng-def">The potential drop per unit length of the potentiometer wire.</div>
+    <div class="formula-box">
+        <span class="formula-text">k = <div class="frac"><span class="num">V</span><span class="den">L</span></div></span>
+    </div>
+    <div class="hindi-explain"><p><b>Samjho:</b> 1 cm wire par kitna voltage kharch ho raha hai, wahi k hai.</p></div>
+</div>
+
+<div class="topic-card">
+    <div class="topic-title">4. Comparison of EMF</div>
+    <div class="eng-def">Comparing the EMF of two primary cells ($E_1$ and $E_2$) using their balancing lengths ($l_1$ and $l_2$).</div>
+    <div class="formula-box">
+        <span class="formula-text"><div class="frac"><span class="num">E<sub>1</sub></span><span class="den">E<sub>2</sub></span></div> = <div class="frac"><span class="num">l<sub>1</sub></span><span class="den">l<sub>2</sub></span></div></span>
+    </div>
+    <div class="hindi-explain"><p><b>Samjho:</b> Do alag cells ke liye balance point nikal kar unki taqat compare ki jati hai.</p></div>
+</div>
+
+<div class="topic-card">
+    <div class="topic-title">5. Internal Resistance Measurement</div>
+    <div class="eng-def">Using a potentiometer to find the internal resistance (r) of a cell.</div>
+    <div class="formula-box">
+        <span class="formula-text">r = R <div class="frac"><span class="num">l<sub>1</sub> - l<sub>2</sub></span><span class="den">l<sub>2</sub></span></div></span>
+    </div>
+    <div class="hindi-explain"><p><b>Samjho:</b> Pehle open circuit aur fir closed circuit ka balance point nikal kar 'r' mil jata hai.</p></div>
+</div>
+
+<div class="section-tag" style="color: #00d4ff; font-size: 1.5rem; font-weight: bold; margin: 20px 0; text-transform: uppercase; border-left: 4px solid #fff; padding-left: 10px;">Combination of Resistors</div>
+
+<div class="topic-card">
+    <div class="topic-title">6. Resistors in Series</div>
+    <div class="eng-def">When resistors are connected end-to-end so that the same current flows through each.</div>
+    <div class="formula-box">
+        <span class="formula-text">R<sub>s</sub> = R<sub>1</sub> + R<sub>2</sub> + R<sub>3</sub></span>
+    </div>
+    <div class="hindi-explain"><p><b>Samjho:</b> Series mein resistance badh jata hai. Current same rehta hai, voltage bat jata hai.</p></div>
+</div>
+
+<div class="topic-card">
+    <div class="topic-title">7. Resistors in Parallel</div>
+    <div class="eng-def">When resistors are connected across the same two points, having the same potential difference.</div>
+    <div class="formula-box">
+        <span class="formula-text"><div class="frac"><span class="num">1</span><span class="den">R<sub>p</sub></span></div> = <div class="frac"><span class="num">1</span><span class="den">R<sub>1</sub></span></div> + <div class="frac"><span class="num">1</span><span class="den">R<sub>2</sub></span></div></span>
+    </div>
+    <div class="hindi-explain"><p><b>Samjho:</b> Parallel mein total resistance kam ho jata hai. Voltage same rehta hai, current bat jata hai.</p></div>
+</div>
+
+<div class="topic-card">
+    <div class="topic-title">8. Equivalent Resistance</div>
+    <div class="eng-def">A single resistance that can replace a combination of resistors while keeping current and voltage the same.</div>
+    <div class="hindi-explain"><p><b>Samjho:</b> Saare resistors ko hata kar jo akela unka kaam kare, wahi equivalent hai.</p></div>
+</div>
+
+<div class="section-tag" style="color: #00d4ff; font-size: 1.5rem; font-weight: bold; margin: 20px 0; text-transform: uppercase; border-left: 4px solid #fff; padding-left: 10px;">Heating Effect of Current</div>
+
+<div class="topic-card">
+    <div class="topic-title">9. Heating Effect of Current</div>
+    <div class="eng-def">The production of heat in a conductor due to the flow of electric current.</div>
+    <div class="hindi-explain"><p><b>Samjho:</b> Jab current chalta hai toh conductor garam ho jata hai, jaise heater ya iron.</p></div>
+</div>
+
+<div class="topic-card">
+    <div class="topic-title">10. Joule's Law of Heating</div>
+    <div class="eng-def">Heat produced ($H$) is directly proportional to $I^2$, $R$, and time ($t$).</div>
+    <div class="formula-box">
+        <span class="formula-text">H = I<sup>2</sup> R t</span>
+    </div>
+    <div class="hindi-explain"><p><b>Samjho:</b> Current double karoge toh garmi 4 guna zyada ho jayegi.</p></div>
+</div>
+<div class="section-tag" style="color: #00d4ff; font-size: 1.5rem; font-weight: bold; margin: 20px 0; text-transform: uppercase; border-left: 4px solid #fff; padding-left: 10px;">Microscopic View of Current</div>
+
+<div class="topic-card">
+    <div class="topic-title">1. Drift Velocity Concept (v<sub>d</sub>)</div>
+    <div class="eng-def">The average velocity with which free electrons get drifted towards the positive terminal of the conductor under the influence of an external electric field.</div>
+    <div class="formula-box">
+        <span class="formula-text">v<sub>d</sub> = <div class="frac"><span class="num">e E &tau;</span><span class="den">m</span></div></span>
+    </div>
+    <div class="hindi-explain"><p><b>Samjho:</b> Jab battery jodi jati hai, toh electrons ek dhimi lekin pakki raftar se positive side ki taraf khisakte hain, wahi drift velocity hai.</p></div>
+</div>
+
+<div class="topic-card">
+    <div class="topic-title">2. Relation: Drift Velocity & Current</div>
+    <div class="eng-def">The mathematical relationship showing how electric current depends on the drift speed of electrons.</div>
+    <div class="formula-box">
+        <span class="formula-text">I = n e A v<sub>d</sub></span>
+    </div>
+    <div class="hindi-explain"><p><b>Samjho:</b> Jitni zyada drift velocity hogi, wire mein utna hi zyada current flow karega.</p></div>
+</div>
+
+<div class="topic-card">
+    <div class="topic-title">3. Mobility (&mu;)</div>
+    <div class="eng-def">The magnitude of drift velocity per unit electric field applied.</div>
+    <div class="formula-box">
+        <span class="formula-text">&mu; = <div class="frac"><span class="num">v<sub>d</sub></span><span class="den">E</span></div></span>
+    </div>
+    <div class="hindi-explain"><p><b>Samjho:</b> Ye batata hai ki ek electron kisi material ke andar kitni aasani se 'bhag' sakta hai jab uspar electric field lagayi jaye.</p></div>
+</div>
+<div style="text-align:center; margin-bottom:20px; padding: 20px 10px;">
+    <h1 style="color:#00d4ff; font-family:sans-serif; text-transform:uppercase; text-shadow:0 0 15px rgba(0,212,255,0.5); font-weight: 900; font-size: 2.2rem;">Current Electricity MCQ</h1>
+    <p style="color:#FFD700; font-family:sans-serif; font-weight:bold; letter-spacing: 1px;">⚡ MISSION 100: TOPPER'S CHALLENGE ⚡</p>
+</div>
+
+<div id="quiz-box" style="max-width:600px; margin:auto; position:relative; z-index:1;"></div>
+
+<div id="quiz-overlay" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; z-index:9999; flex-direction:column; align-items:center; justify-content:center; pointer-events:none;">
+    <div id="status-strip" style="width:100%; text-align:center; padding:30px 0;">
+        <h1 id="status-title" style="margin:0; padding:0;"></h1>
+        <p id="status-message" style="margin:10px 0; font-family:sans-serif; font-weight:bold;"></p>
+        <p id="next-msg" style="margin:0; font-family:sans-serif;"></p>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+const questions = [
+    { q:"SI unit of electric current is:", opts:["Volt","Ohm","Ampere","Watt"], ans:2 },
+    { q:"Current is a ________ quantity.", opts:["Scalar","Vector","Tensor","None"], ans:0 },
+    { q:"The flow of 1 Coulomb charge per second is:", opts:["1 Volt","1 Ampere","1 Ohm","1 Watt"], ans:1 },
+    { q:"Direction of conventional current is:", opts:["-ve to +ve","+ve to -ve","Same as electrons","None"], ans:1 },
+    { q:"The drift velocity of electrons is nearly:", opts:["10^8 m/s","10^4 m/s","10^-4 m/s","3x10^8 m/s"], ans:2 },
+    { q:"Ohm's law is valid for:", opts:["Semiconductors","Diodes","Metals","Insulators"], ans:2 },
+    { q:"Resistance of a wire is ________ to its length.", opts:["Inversely proportional","Directly proportional","Equal","Independent"], ans:1 },
+    { q:"If length of wire is doubled, its resistance becomes:", opts:["Half","Double","Four times","Same"], ans:1 },
+    { q:"Resistivity depends only on:", opts:["Length","Area","Material & Temp","Shape"], ans:2 },
+    { q:"Conductivity is the reciprocal of:", opts:["Resistance","Resistivity","Current","Voltage"], ans:1 },
+    { q:"Unit of resistivity is:", opts:["Ohm/m","Ohm-m","Ohm-m²","Mho"], ans:1 },
+    { q:"With increase in temperature, resistance of metal:", opts:["Decreases","Increases","Remains same","First increases then decreases"], ans:1 },
+    { q:"With increase in temperature, resistance of semiconductor:", opts:["Increases","Decreases","Remains same","Becomes zero"], ans:1 },
+    { q:"Superconductors have ________ resistance.", opts:["Very high","Maximum","Zero","Negative"], ans:2 },
+    { q:"Internal resistance of a cell is due to:", opts:["Electrode","Electrolyte","Container","Wires"], ans:1 },
+    { q:"EMF of a cell is measured in:", opts:["Newton","Joule","Volt","Ampere"], ans:2 },
+    { q:"Kirchhoff's First Law is based on conservation of:", opts:["Energy","Charge","Momentum","Mass"], ans:1 },
+    { q:"Kirchhoff's Second Law is based on conservation of:", opts:["Charge","Energy","Power","Voltage"], ans:1 },
+    { q:"Wheatstone bridge is most sensitive when all R are:", opts:["Different","Equal","Zero","Infinite"], ans:1 },
+    { q:"Meter bridge works on the principle of:", opts:["Ohm's Law","Wheatstone Bridge","Joule's Law","None"], ans:1 },
+    { q:"Potentiometer is used to measure:", opts:["Current","Internal Resistance","Power","Inductance"], ans:1 },
+    { q:"Potentiometer is preferred over voltmeter because:", opts:["It is cheap","It draws no current","It is small","It is fast"], ans:1 },
+    { q:"Joule's law of heating is given by:", opts:["V=IR","H=I²Rt","P=VI","V=W/Q"], ans:1 },
+    { q:"Electric power P is equal to:", opts:["V/I","I²R","V/R","IR"], ans:1 },
+    { q:"1 kilowatt-hour (kWh) is the unit of:", opts:["Power","Force","Energy","Current"], ans:2 },
+    { q:"1 kWh is equal to ________ Joules.", opts:["3.6x10^5","3.6x10^6","1000","3600"], ans:1 },
+    { q:"Resistors in series have the same:", opts:["Voltage","Current","Power","None"], ans:1 },
+    { q:"Resistors in parallel have the same:", opts:["Current","Voltage","Resistance","None"], ans:1 },
+    { q:"The heat produced is proportional to the ________ of current.", opts:["Square","Cube","Square root","Reciprocal"], ans:0 },
+    { q:"Sensitivity of potentiometer can be increased by:", opts:["Increasing length","Decreasing length","Increasing V","None"], ans:0 },
+    { q:"Potential gradient unit is:", opts:["V-m","V/m","V/m²","Ohm-m"], ans:1 },
+    { q:"When n cells of EMF 'E' are in series, total EMF is:", opts:["E","E/n","nE","n²E"], ans:2 },
+    { q:"A wire is stretched to double its length, new R is:", opts:["2R","4R","R/2","R/4"], ans:1 },
+    { q:"Color code for Carbon resistor: Black represents:", opts:["0","1","2","5"], ans:0 },
+    { q:"Terminal voltage is ________ EMF during charging.", opts:["Less than","Greater than","Equal to","Zero"], ans:1 },
+    { q:"Drift velocity is ________ to electric field E.", opts:["Directly proportional","Inversely proportional","Equal","None"], ans:0 },
+    { q:"The relaxation time ________ with increase in temp.", opts:["Increases","Decreases","Remains same","None"], ans:1 },
+    { q:"Mobility of charge carrier is:", opts:["Vd / E","E / Vd","Vd * E","1 / Vd"], ans:0 },
+    { q:"Current density J is a ________ quantity.", opts:["Scalar","Vector","Tensor","None"], ans:1 },
+    { q:"Ohmic conductors show a ________ V-I graph.", opts:["Circular","Curved","Straight line","Parabolic"], ans:2 },
+    { q:"Example of non-ohmic conductor is:", opts:["Copper","Silver","Diode","Aluminium"], ans:2 },
+    { q:"Commercial unit of electrical energy is:", opts:["Watt","Joule","kWh","Volt-Ampere"], ans:2 },
+    { q:"Which material is used for standard resistors?", opts:["Copper","Silver","Manganin","Gold"], ans:2 },
+    { q:"Fuse wire should have ________ melting point.", opts:["High","Low","Medium","Infinite"], ans:1 },
+    { q:"Current density SI unit is:", opts:["A/m","A/m²","A-m","Ohm/m"], ans:1 },
+    { q:"Internal resistance ________ as the cell is used.", opts:["Decreases","Increases","Remains same","Becomes zero"], ans:1 },
+    { q:"Shunt is a ________ resistance wire.", opts:["High","Low","Zero","Infinite"], ans:1 },
+    { q:"Potentiometer wire is usually made of:", opts:["Copper","Constantan","Iron","Aluminium"], ans:1 },
+    { q:"Relation between I and Vd is:", opts:["I = neAvd","I = nAvd","I = ne/vd","I = vd/ne"], ans:0 },
+    { q:"Resistance of a human body (dry) is about:", opts:["10 Ohm","100 Ohm","10,000 Ohm","Infinite"], ans:2 }
+];
+
+const quizBox = document.getElementById('quiz-box');
+
+questions.forEach((item, index) => {
+    let card = document.createElement('div');
+    card.style.cssText = "background:rgba(255,255,255,0.03); padding:20px; margin:15px 0; border-radius:15px; border:1.5px solid rgba(0, 212, 255, 0.2);";
+
+    card.innerHTML = `<p style="color:#00d4ff; font-size:18px; font-weight:bold;">Q${index+1}. ${item.q}</p>`;
+
+    item.opts.forEach((opt, oIdx) => {
+        let btn = document.createElement('button');
+        btn.innerText = opt;
+        btn.style.cssText = "display:block; width:100%; margin:12px 0; padding:15px; background:rgba(255,255,255,0.05); color:#e0e0e0; border:1px solid #00d4ff; border-radius:12px; text-align:left; font-weight:600; cursor:pointer; transition: 0.2s;";
+
+        btn.onmouseover = () => { btn.style.background = "rgba(0, 212, 255, 0.1)"; };
+        btn.onmouseout = () => { btn.style.background = "rgba(255,255,255,0.05)"; };
+
+        btn.onclick = () => {
+            const overlay = document.getElementById('quiz-overlay');
+            const title = document.getElementById('status-title');
+            const msg = document.getElementById('status-message');
+            const nxt = document.getElementById('next-msg');
+            const strip = document.getElementById('status-strip');
+
+            overlay.style.display = "flex";
+            overlay.style.pointerEvents = "auto"; 
+
+            if(oIdx === item.ans){
+                overlay.style.background = "rgba(0,0,0,0.85)";
+                strip.style.background = "transparent";
+                title.style.cssText = "font-family:'Dancing Script', cursive; color:#00d4ff; font-size:60px; text-shadow:0 0 20px #00d4ff;";
+                title.innerText = "Congratulations";
+                msg.innerText = "Excellent! You are a true Topper.";
+                msg.style.color = "#FFD700";
+                nxt.innerText = "Go to next question...";
+                nxt.style.color = "#fff";
+
+                var end = Date.now() + 1500;
+                var colors = ['#00d4ff','#ffffff','#FFD700'];
+                (function frame(){
+                    confetti({particleCount:15,angle:60,spread:65,origin:{x:0},colors:colors, zIndex: 999999});
+                    confetti({particleCount:15,angle:120,spread:65,origin:{x:1},colors:colors, zIndex: 999999});
+                    if(Date.now() < end) requestAnimationFrame(frame);
+                })();
+            } else {
+                overlay.style.background = "radial-gradient(rgba(139,0,0,0.5) 10%, rgba(0,0,0,0.85) 90%)";
+                strip.style.background = "rgba(0,0,0,0.6)";
+                strip.style.width = "100%";
+                strip.style.padding = "30px 0";
+                title.style.cssText = "font-family:'Oswald', sans-serif; color:red; font-size:80px; font-weight:900; letter-spacing:10px; text-shadow:4px 4px 0px #000;";
+                title.innerText = "WASTED";
+                msg.innerText = "Oops! Try again with focus.";
+                msg.style.color = "#fff";
+                nxt.innerText = "";
+            }
+
+            setTimeout(() => {
+                overlay.style.display = "none";
+                overlay.style.pointerEvents = "none"; 
+            }, 2500);
+        };
+        card.appendChild(btn);
+    });
+    quizBox.appendChild(card);
+});
+});
+</script>
+<div style="text-align:center; margin-bottom:20px; padding: 20px 10px;">
+    <h1 style="color:#00d4ff; font-family:sans-serif; text-transform:uppercase; text-shadow:0 0 15px rgba(0,212,255,0.5); font-weight: 900; font-size: 2.2rem;">Current Electricity: Level 2</h1>
+    <p style="color:#FFD700; font-family:sans-serif; font-weight:bold; letter-spacing: 1px;">⚡ TOPPER'S CHALLENGE: Q.51 TO Q.100 ⚡</p>
+</div>
+
+<div id="quiz-box-v2" style="max-width:600px; margin:auto; position:relative; z-index:1;"></div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+const questions2 = [
+    { q:"51. The resistance of a conductor is inversely proportional to:", opts:["Length","Area of cross-section","Temperature","Current"], ans:1 },
+    { q:"52. Dimension of resistance is:", opts:["[ML²T⁻³A⁻²]","[ML²T⁻²A⁻¹]","[MLT⁻³A⁻²]","[ML²T⁻³A⁻¹]"], ans:0 },
+    { q:"53. The path of electrons in a conductor in the absence of electric field is:", opts:["Straight line","Circular","Zig-zag (Random)","Elliptical"], ans:2 },
+    { q:"54. If 'n' identical resistors each of 'R' are connected in series, Req is:", opts:["R/n","n²R","nR","R/n²"], ans:2 },
+    { q:"55. If 'n' identical resistors each of 'R' are connected in parallel, Req is:", opts:["nR","R/n","n²R","R"], ans:1 },
+    { q:"56. Ratio of series Req to parallel Req for 'n' identical resistors is:", opts:["n","1/n","n²","1/n²"], ans:2 },
+    { q:"57. Manganin is used for standard resistors because it has:", opts:["High resistivity","Low temp coefficient","High melting point","Both A and B"], ans:3 },
+    { q:"58. The temperature coefficient of resistance is negative for:", opts:["Copper","Silver","Silicon (Semiconductor)","Aluminium"], ans:2 },
+    { q:"59. Potentiometer wire is made of:", opts:["Copper","Constantan or Manganin","Iron","Tungsten"], ans:1 },
+    { q:"60. The balance point in a meter bridge is usually preferred at:", opts:["10 cm","90 cm","Middle (50 cm)","Anywhere"], ans:2 },
+    { q:"61. One horse power (1 HP) is equal to:", opts:["746 W","500 W","1000 W","764 W"], ans:0 },
+    { q:"62. Internal resistance of a fresh cell is:", opts:["High","Low","Zero","Infinite"], ans:1 },
+    { q:"63. As the cell gets older, its internal resistance:", opts:["Decreases","Increases","Remains same","Becomes zero"], ans:1 },
+    { q:"64. Current drawn from a cell is maximum when external R is:", opts:["Infinite","Equal to r","Zero","Maximum"], ans:2 },
+    { q:"65. Copper wire is used in connecting wires because it has:", opts:["Low resistance","High resistance","Low melting point","High cost"], ans:0 },
+    { q:"66. When a cell is being charged, the terminal voltage V is:", opts:["V = E - Ir","V = E + Ir","V = E","V = Zero"], ans:1 },
+    { q:"67. Two bulbs of 25W and 100W are in series, which glows brighter?", opts:["100W","25W","Both same","None"], ans:1 },
+    { q:"68. Two bulbs of 25W and 100W are in parallel, which glows brighter?", opts:["100W","25W","Both same","None"], ans:0 },
+    { q:"69. Sensitivity of a galvanometer can be increased by:", opts:["Decreasing area","Increasing magnetic field","Decreasing number of turns","Increasing spring constant"], ans:1 },
+    { q:"70. Potential gradient is ________ per unit length.", opts:["Current","Resistance","Potential drop","Charge"], ans:2 },
+    { q:"71. SI unit of mobility is:", opts:["m²V⁻¹s⁻¹","mV⁻¹s⁻¹","m²Vs","m²V⁻²s"], ans:0 },
+    { q:"72. When current is constant, drift velocity is inversely proportional to:", opts:["Length","Area","Resistivity","Voltage"], ans:1 },
+    { q:"73. Relaxation time is the time between two successive:", opts:["Rotations","Collisions","Vibrations","Accelerations"], ans:1 },
+    { q:"74. Drift velocity is very small, yet current starts instantly because:", opts:["Electrons move fast","Electric field is setup at speed of light","Protons move","None"], ans:1 },
+    { q:"75. Resistance of an ideal cell is:", opts:["1 Ohm","Zero","Infinite","10 Ohm"], ans:1 },
+    { q:"76. Kirchhoff’s laws are applicable to both AC and DC:", opts:["True","False","Only AC","Only DC"], ans:0 },
+    { q:"77. Heat produced in a conductor is proportional to:", opts:["I","I²","√I","1/I"], ans:1 },
+    { q:"78. The value of k in V = kl is called:", opts:["Potential","Potential Gradient","Resistance","Current Density"], ans:1 },
+    { q:"79. Resistance of a heater wire is ________ than connecting wires.", opts:["Lower","Higher","Same","Zero"], ans:1 },
+    { q:"80. Material of fuse wire should have:", opts:["High R, High MP","Low R, High MP","High R, Low MP","Low R, Low MP"], ans:2 },
+    { q:"81. Thermistors are used to measure:", opts:["Current","Voltage","Temperature","Pressure"], ans:2 },
+    { q:"82. Unit of electrical conductivity is:", opts:["Ohm-m","Ohm/m","Siemens/m","Siemens-m"], ans:2 },
+    { q:"83. When a wire is stretched to 'n' times its length, new R' is:", opts:["nR","n²R","R/n","R/n²"], ans:1 },
+    { q:"84. If radius of a wire is doubled, its resistance becomes:", opts:["2 times","4 times","1/4 times","1/16 times"], ans:3 },
+    { q:"85. Dimensional formula for conductivity is:", opts:["[M⁻¹L⁻³T³A²]","[M¹L³T⁻³A⁻²]","[M⁻¹L⁻²T³A²]","[MLT⁻³A⁻¹]"], ans:0 },
+    { q:"86. For a balanced Wheatstone bridge, current through galvanometer is:", opts:["Maximum","Minimum","Zero","Infinite"], ans:2 },
+    { q:"87. The alloy used for making heater elements is:", opts:["Copper","Nichrome","Steel","Aluminium"], ans:1 },
+    { q:"88. In mixed grouping of cells, current is max when:", opts:["R > r","R < r","R = r_total","R = 0"], ans:2 },
+    { q:"89. The energy dissipated in a resistor appears as:", opts:["Light","Sound","Heat","Magnetism"], ans:2 },
+    { q:"90. 1 unit of electricity (as per bill) is:", opts:["1 Watt","1 Joule","1 kWh","1 Ampere"], ans:2 },
+    { q:"91. Current density J and Electric field E are related as:", opts:["J = &sigma;E","J = E/&sigma;","J = &rho;E","J = &sigma;/E"], ans:0 },
+    { q:"92. Potential difference is measured by:", opts:["Ammeter","Voltmeter","Galvanometer","Manometer"], ans:1 },
+    { q:"93. Potentiometer can also measure:", opts:["Capacitance","Internal Resistance","Inductance","Frequency"], ans:1 },
+    { q:"94. Which of these is a vector quantity?", opts:["Current","Current Density","Resistance","Potential"], ans:1 },
+    { q:"95. The slope of V-I graph for ohmic conductor gives:", opts:["Current","Conductance","Resistance","Power"], ans:2 },
+    { q:"96. SI unit of electric power is:", opts:["Joule","Watt","kWh","Volt"], ans:1 },
+    { q:"97. A wire of 10 Ohm is cut into two equal parts, each part has:", opts:["10 Ohm","5 Ohm","20 Ohm","2.5 Ohm"], ans:1 },
+    { q:"98. When two cells are in parallel, net EMF is ________ if they are identical.", opts:["2E","E/2","E","Zero"], ans:2 },
+    { q:"99. Non-ohmic devices do not follow:", opts:["Faraday's Law","Newton's Law","Ohm's Law","Coulomb's Law"], ans:2 },
+    { q:"100. Superconductivity was discovered by:", opts:["Newton","Ohm","Kamerlingh Onnes","Einstein"], ans:2 }
+];
+
+const quizBox2 = document.getElementById('quiz-box-v2');
+
+questions2.forEach((item, index) => {
+    let card = document.createElement('div');
+    card.style.cssText = "background:rgba(255,255,255,0.03); padding:20px; margin:15px 0; border-radius:15px; border:1.5px solid rgba(0, 212, 255, 0.2);";
+
+    card.innerHTML = `<p style="color:#00d4ff; font-size:18px; font-weight:bold;">${item.q}</p>`;
+
+    item.opts.forEach((opt, oIdx) => {
+        let btn = document.createElement('button');
+        btn.innerText = opt;
+        btn.style.cssText = "display:block; width:100%; margin:12px 0; padding:15px; background:rgba(255,255,255,0.05); color:#e0e0e0; border:1px solid #00d4ff; border-radius:12px; text-align:left; font-weight:600; cursor:pointer; transition: 0.2s;";
+
+        btn.onmouseover = () => { btn.style.background = "rgba(0, 212, 255, 0.1)"; };
+        btn.onmouseout = () => { btn.style.background = "rgba(255,255,255,0.05)"; };
+
+        btn.onclick = () => {
+            const overlay = document.getElementById('quiz-overlay');
+            const title = document.getElementById('status-title');
+            const msg = document.getElementById('status-message');
+            const nxt = document.getElementById('next-msg');
+            const strip = document.getElementById('status-strip');
+
+            overlay.style.display = "flex";
+            overlay.style.pointerEvents = "auto"; 
+
+            if(oIdx === item.ans){
+                overlay.style.background = "rgba(0,0,0,0.85)";
+                strip.style.background = "transparent";
+                title.style.cssText = "font-family:'Dancing Script', cursive; color:#00d4ff; font-size:60px; text-shadow:0 0 20px #00d4ff;";
+                title.innerText = "Congratulations";
+                msg.innerText = "Excellent! You are a true Topper.";
+                msg.style.color = "#FFD700";
+                nxt.innerText = "Go to next question...";
+
+                var end = Date.now() + 1500;
+                var colors = ['#00d4ff','#ffffff','#FFD700'];
+                (function frame(){
+                    confetti({particleCount:15,angle:60,spread:65,origin:{x:0},colors:colors, zIndex: 999999});
+                    confetti({particleCount:15,angle:120,spread:65,origin:{x:1},colors:colors, zIndex: 999999});
+                    if(Date.now() < end) requestAnimationFrame(frame);
+                })();
+            } else {
+                overlay.style.background = "radial-gradient(rgba(139,0,0,0.5) 10%, rgba(0,0,0,0.85) 90%)";
+                strip.style.background = "rgba(0,0,0,0.6)";
+                strip.style.width = "100%";
+                strip.style.padding = "30px 0";
+                title.style.cssText = "font-family:'Oswald', sans-serif; color:red; font-size:80px; font-weight:900; letter-spacing:10px; text-shadow:4px 4px 0px #000;";
+                title.innerText = "WASTED";
+                msg.innerText = "Oops! Try again with focus.";
+                msg.style.color = "#fff";
+                nxt.innerText = "";
+            }
+
+            setTimeout(() => {
+                overlay.style.display = "none";
+                overlay.style.pointerEvents = "none"; 
+            }, 2500);
+        };
+        card.appendChild(btn);
+    });
+    quizBox2.appendChild(card);
+});
+});
+</script>
+<style>
+    .copy-card { background: #000; padding: 20px; border-radius: 15px; border-left: 5px solid #00d4ff; margin-bottom: 30px; font-family: 'Segoe UI', sans-serif; }
+    .q-text { color: #FFD700; font-weight: bold; font-size: 1.2rem; margin-bottom: 20px; }
+    .ans-btn { background: #00d4ff; color: #000; border: none; padding: 10px 25px; border-radius: 8px; font-weight: bold; cursor: pointer; margin-bottom: 15px; }
+    
+    /* THE CLEAN BOX (Photo 1000023373 Style) */
+    .derivation-container { display: none; background: #0a0a0a; border: 1px solid #222; padding: 25px; border-radius: 12px; color: #fff; }
+    
+    .step-blue { color: #00d4ff; font-weight: bold; margin-top: 20px; display: block; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px; }
+    .line { display: block; margin: 12px 0; font-size: 1.1rem; line-height: 1.6; }
+
+    /* REAL VERTICAL FRACTION (No Kachra) */
+    .math-wrap { display: flex; align-items: center; justify-content: flex-start; margin: 15px 0; font-size: 1.2rem; }
+    .v-frac { display: inline-flex; flex-direction: column; align-items: center; vertical-align: middle; margin: 0 10px; }
+    .v-num { border-bottom: 2px solid #fff; padding: 0 5px; width: 100%; text-align: center; }
+    .v-den { padding: 0 5px; width: 100%; text-align: center; }
+
+    /* FINAL HIGHLIGHT BOX (Photo 1000023499 Style) */
+    .result-highlight { border: 2px solid #00d4ff; padding: 15px; text-align: center; color: #00f7ff; font-size: 1.7rem; font-weight: bold; margin-top: 30px; border-radius: 10px; background: rgba(0, 212, 255, 0.05); box-shadow: 0 0 15px rgba(0,212,255,0.1); }
+</style>
+
+<script>
+function toggleCleanAns(btn) {
+    var box = btn.nextElementSibling;
+    if (box.style.display === "none" || box.style.display === "") {
+        box.style.display = "block";
+        btn.innerText = "Hide Derivation";
+        btn.style.background = "#ff4444";
+        btn.style.color = "#fff";
+    } else {
+        box.style.display = "none";
+        btn.innerText = "Show Answer";
+        btn.style.background = "#00d4ff";
+        btn.style.color = "#000";
+    }
+}
+</script>
+
+<div class="copy-card">
+    <div class="q-text">Q1. Derive the relation between Electric Current (I) and Drift Velocity (v<sub>d</sub>).</div>
+    <button class="ans-btn" onclick="toggleCleanAns(this)">Show Answer</button>
+    <div class="derivation-container">
+        <span class="line">Consider a conductor of length <b>L</b> and area <b>A</b>.</span>
+        
+        <span class="step-blue">STEP 1: TOTAL CHARGE</span>
+        <span class="line">Total number of electrons (N) = n &times; (A &times; L)</span>
+        <span class="line">Total charge (Q) = N &times; e = <b>nALe</b></span>
+        
+        <span class="step-blue">STEP 2: TIME TAKEN</span>
+        <div class="math-wrap">
+            Time (t) = <div class="v-frac"><span class="v-num">L</span><span class="v-den">v<sub>d</sub></span></div>
+        </div>
+        
+        <span class="step-blue">STEP 3: CURRENT CALCULATION</span>
+        <div class="math-wrap">
+            I = <div class="v-frac"><span class="v-num">Q</span><span class="v-den">t</span></div> = <div class="v-frac"><span class="v-num">nALe</span><span class="v-den">L / v<sub>d</sub></span></div>
+        </div>
+        <span class="line">Here, <b>L</b> cancels out.</span>
+        
+        <div class="result-highlight">I = n e A v<sub>d</sub></div>
+    </div>
+</div>
+
+<div class="copy-card">
+    <div class="q-text">Q2. Deduce Ohm's Law (V=IR) using Drift Velocity concept.</div>
+    <button class="ans-btn" onclick="toggleCleanAns(this)">Show Answer</button>
+    <div class="derivation-container">
+        <span class="step-blue">STEP 1: BASIC FORMULAS</span>
+        <span class="line">We know, <b>I = neAv<sub>d</sub></b></span>
+        <div class="math-wrap">
+            And, v<sub>d</sub> = <div class="v-frac"><span class="v-num">e E &tau;</span><span class="v-den">m</span></div>
+        </div>
+        
+        <span class="step-blue">STEP 2: SUBSTITUTION</span>
+        <div class="math-wrap">
+            I = neA <div class="v-frac"><span class="v-num">e E &tau;</span><span class="v-den">m</span></div> = <div class="v-frac"><span class="v-num">n e<sup>2</sup> A &tau;</span><span class="v-den">m</span></div> E
+        </div>
+        
+        <span class="step-blue">STEP 3: FINAL DERIVATION</span>
+        <div class="math-wrap">
+            Put E = <div class="v-frac"><span class="v-num">V</span><span class="v-den">L</span></div>
+        </div>
+        <div class="math-wrap">
+            V = I &times; <div class="v-frac"><span class="v-num">m</span><span class="v-den">n e<sup>2</sup> &tau;</span></div> &times; <div class="v-frac"><span class="v-num">L</span><span class="v-den">A</span></div>
+        </div>
+        
+        <div class="result-highlight">V = I R</div>
+    </div>
+</div>
+
+<div class="copy-card">
+    <div class="q-text">Q4. Derive internal resistance (r) of a cell using Potentiometer.</div>
+    <button class="ans-btn" onclick="toggleCleanAns(this)">Show Answer</button>
+    <div class="derivation-container">
+        <span class="step-blue">STEP 1: OPEN CIRCUIT BALANCE</span>
+        <span class="line">EMF (E) = k l<sub>1</sub></span>
+        
+        <span class="step-blue">STEP 2: CLOSED CIRCUIT BALANCE</span>
+        <span class="line">Terminal Voltage (V) = k l<sub>2</sub></span>
+        
+        <span class="step-blue">STEP 3: INTERNAL RESISTANCE</span>
+        <div class="math-wrap">
+            r = R [ <div class="v-frac"><span class="v-num">E</span><span class="v-den">V</span></div> - 1 ]
+        </div>
+        <div class="math-wrap">
+            r = R [ <div class="v-frac"><span class="v-num">k l<sub>1</sub></span><span class="v-den">k l<sub>2</sub></span></div> - 1 ]
+        </div>
+        
+        <div class="result-highlight">r = R [ (l<sub>1</sub> - l<sub>2</sub>) / l<sub>2</sub> ]</div>
+    </div>
+</div>
+<style>
+    .copy-card { background: #000; padding: 20px; border-radius: 15px; border-left: 5px solid #00d4ff; margin-bottom: 30px; font-family: sans-serif; }
+    .q-text { color: #FFD700; font-weight: bold; font-size: 1.2rem; margin-bottom: 20px; }
+    .ans-btn { background: #00d4ff; color: #000; border: none; padding: 10px 25px; border-radius: 8px; font-weight: bold; cursor: pointer; margin-bottom: 15px; }
+    .derivation-container { display: none; background: #0a0a0a; border: 1px solid #222; padding: 25px; border-radius: 12px; color: #fff; }
+    .step-blue { color: #00d4ff; font-weight: bold; margin-top: 20px; display: block; text-transform: uppercase; font-size: 0.9rem; }
+    .line { display: block; margin: 12px 0; font-size: 1.1rem; }
+
+    /* VERTICAL FRACTION (NO KACHRA) */
+    .math-wrap { display: flex; align-items: center; margin: 15px 0; font-size: 1.2rem; }
+    .v-frac { display: inline-flex; flex-direction: column; align-items: center; vertical-align: middle; margin: 0 10px; }
+    .v-num { border-bottom: 2px solid #fff; padding: 0 5px; width: 100%; text-align: center; }
+    .v-den { padding: 0 5px; width: 100%; text-align: center; }
+
+    .result-box { border: 2px solid #00d4ff; padding: 15px; text-align: center; color: #00f7ff; font-size: 1.6rem; font-weight: bold; margin-top: 30px; border-radius: 10px; background: rgba(0, 212, 255, 0.05); }
+</style>
+
+<script>
+function toggleAns(btn) {
+    var box = btn.nextElementSibling;
+    if (box.style.display === "none" || box.style.display === "") {
+        box.style.display = "block";
+        btn.innerText = "Hide Answer";
+        btn.style.background = "#ff4444"; btn.style.color = "#fff";
+    } else {
+        box.style.display = "none";
+        btn.innerText = "Show Answer";
+        btn.style.background = "#00d4ff"; btn.style.color = "#000";
+    }
+}
+</script>
+
+<div class="copy-card">
+    <div class="q-text">Q3. State and explain Kirchhoff's Laws for electrical circuits.</div>
+    <button class="ans-btn" onclick="toggleAns(this)">Show Answer</button>
+    <div class="derivation-container">
+        <span class="step-blue">1. JUNCTION RULE (KCL)</span>
+        <span class="line">The sum of currents entering a junction is equal to the sum of currents leaving it.</span>
+        <div class="math-wrap">&Sigma; I = 0</div>
+        <span class="line"><b>Note:</b> It is based on <u>Conservation of Charge</u>.</span>
+
+        <span class="step-blue">2. LOOP RULE (KVL)</span>
+        <span class="line">The algebraic sum of changes in potential around any closed loop is zero.</span>
+        <div class="math-wrap">&Sigma; &Delta;V = 0</div>
+        <span class="line"><b>Note:</b> It is based on <u>Conservation of Energy</u>.</span>
+    </div>
+</div>
+
+<div class="copy-card">
+    <div class="q-text">Q5. Define Mobility (&mu;) and write its relation with Drift Velocity.</div>
+    <button class="ans-btn" onclick="toggleAns(this)">Show Answer</button>
+    <div class="derivation-container">
+        <span class="step-blue">DEFINITION</span>
+        <span class="line">Mobility is the magnitude of drift velocity per unit electric field.</span>
+        
+        <span class="step-blue">DERIVATION</span>
+        <div class="math-wrap">
+            &mu; = <div class="v-frac"><span class="v-num">v<sub>d</sub></span><span class="v-den">E</span></div>
+        </div>
+        <div class="math-wrap">
+            Since v<sub>d</sub> = <div class="v-frac"><span class="v-num">e E &tau;</span><span class="v-den">m</span></div>
+        </div>
+        
+        <div class="result-box">&mu; = <div class="v-frac"><span class="v-num">e &tau;</span><span class="v-den">m</span></div></div>
+        <span class="line"><b>SI Unit:</b> m<sup>2</sup> V<sup>-1</sup> s<sup>-1</sup></span>
+    </div>
+</div>
+
+<div class="copy-card">
+    <div class="q-text">Q6. Compare EMF of two cells using a Potentiometer.</div>
+    <button class="ans-btn" onclick="toggleAns(this)">Show Answer</button>
+    <div class="derivation-container">
+        <span class="step-blue">STEP 1: FIRST CELL</span>
+        <span class="line">For cell 1, balance length is l<sub>1</sub>:</span>
+        <div class="math-wrap">E<sub>1</sub> = k l<sub>1</sub></div>
+
+        <span class="step-blue">STEP 2: SECOND CELL</span>
+        <span class="line">For cell 2, balance length is l<sub>2</sub>:</span>
+        <div class="math-wrap">E<sub>2</sub> = k l<sub>2</sub></div>
+
+        <span class="step-blue">STEP 3: COMPARISON</span>
+        <div class="math-wrap">
+            Taking ratio: <div class="v-frac"><span class="v-num">E<sub>1</sub></span><span class="v-den">E<sub>2</sub></span></div> = <div class="v-frac"><span class="v-num">k l<sub>1</sub></span><span class="v-den">k l<sub>2</sub></span></div>
+        </div>
+        <div class="result-box">E<sub>1</sub> / E<sub>2</sub> = l<sub>1</sub> / l<sub>2</sub></div>
+    </div>
+</div>
+
+<div class="copy-card">
+    <div class="q-text">Q7. Explain the Heating Effect of current and Joule's Law.</div>
+    <button class="ans-btn" onclick="toggleAns(this)">Show Answer</button>
+    <div class="derivation-container">
+        <span class="step-blue">JOULE'S LAW</span>
+        <span class="line">Heat produced (H) in a conductor is directly proportional to:</span>
+        <span class="line">1. Square of current (I<sup>2</sup>)</span>
+        <span class="line">2. Resistance (R)</span>
+        <span class="line">3. Time (t)</span>
+        
+        <div class="result-box">H = I<sup>2</sup> R t</div>
+    </div>
+</div>
+
+<div class="copy-card">
+    <div class="q-text">Q9. Why is a Potentiometer preferred over a Voltmeter?</div>
+    <button class="ans-btn" onclick="toggleAns(this)">Show Answer</button>
+    <div class="derivation-container">
+        <span class="step-blue">REASON 1: NULL METHOD</span>
+        <span class="line">Potentiometer works on null deflection, so it draws <b>no current</b> from the cell.</span>
+
+        <span class="step-blue">REASON 2: ACCURACY</span>
+        <span class="line">Since no current is drawn, it measures <b>True EMF (E)</b>, while a voltmeter measures terminal voltage (V).</span>
+
+        <span class="step-blue">REASON 3: SENSITIVITY</span>
+        <span class="line">Potentiometer can measure even very small potential differences accurately.</span>
+    </div>
+</div>
+
+<div class="copy-card">
+    <div class="q-text">Q10. Derive Equivalent Resistance for Series combination.</div>
+    <button class="ans-btn" onclick="toggleAns(this)">Show Answer</button>
+    <div class="derivation-container">
+        <span class="step-blue">STEP 1: VOLTAGE DIVISION</span>
+        <span class="line">In series, current I is same. Total Voltage V = V<sub>1</sub> + V<sub>2</sub> + V<sub>3</sub></span>
+
+        <span class="step-blue">STEP 2: OHM'S LAW</span>
+        <span class="line">Substitute V = IR:</span>
+        <span class="line">I R<sub>s</sub> = I R<sub>1</sub> + I R<sub>2</sub> + I R<sub>3</sub></span>
+
+        <span class="step-blue">STEP 3: RESULT</span>
+        <span class="line">Taking I common and cancelling from both sides:</span>
+        <div class="result-box">R<sub>s</sub> = R<sub>1</sub> + R<sub>2</sub> + R<sub>3</sub></div>
+    </div>
+</div>
+
+<div class="copy-card">
+    <div class="q-text">Q11. Derive Equivalent EMF for two cells in Parallel.</div>
+    <button class="ans-btn" onclick="toggleAns(this)">Show Answer</button>
+    <div class="derivation-container">
+        <span class="step-blue">STEP 1: CURRENT DIVISION</span>
+        <span class="line">Total current I = I<sub>1</sub> + I<sub>2</sub></span>
+        
+        <span class="step-blue">STEP 2: TERMINAL VOLTAGE</span>
+        <div class="math-wrap">
+            I<sub>1</sub> = <div class="v-frac"><span class="v-num">E<sub>1</sub> - V</span><span class="v-den">r<sub>1</sub></span></div> , I<sub>2</sub> = <div class="v-frac"><span class="v-num">E<sub>2</sub> - V</span><span class="v-den">r<sub>2</sub></span></div>
+        </div>
+
+        <span class="step-blue">STEP 3: FINAL CALCULATION</span>
+        <span class="line">After rearranging for V:</span>
+        <div class="result-box">
+            E<sub>eq</sub> = <div class="v-frac"><span class="v-num">E<sub>1</sub>r<sub>2</sub> + E<sub>2</sub>r<sub>1</sub></span><span class="v-den">r<sub>1</sub> + r<sub>2</sub></span></div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
