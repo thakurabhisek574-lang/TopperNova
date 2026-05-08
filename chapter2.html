@@ -1005,6 +1005,181 @@ questions.forEach((item, index) => {
 });
 });
 </script>
+<div class="container">
+<div style="text-align:center; margin-bottom:20px;">
+    <h1 style="color:#00f7ff; font-family:sans-serif; text-transform:uppercase; text-shadow:0 0 15px #00f7ff;">Topper's Trap: Q101 - Q150 (Potential & Capacitance)</h1>
+    <p style="color:#ffffff; font-family:sans-serif; font-weight:bold;">Warning: Conceptual depth ahead. Dhyan se select kar!</p>
+</div>
+
+<div id="quiz-box" style="max-width:600px; margin:auto; position:relative; z-index:1;"></div>
+
+<div id="quiz-overlay" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; z-index:9999; flex-direction:column; align-items:center; justify-content:center; pointer-events:none;">
+    <div id="status-strip" style="width:100%; text-align:center; padding:30px 0;">
+        <h1 id="status-title"></h1>
+        <p id="status-message" style="font-weight:bold;"></p>
+        <p id="next-msg"></p>
+    </div>
+</div>
+
+<style>
+@keyframes rgb-8-glow {
+    0% { border-color: #00f7ff; box-shadow: 0 0 10px #00f7ff; }
+    12.5% { border-color: #ff00c8; box-shadow: 0 0 10px #ff00c8; }
+    25% { border-color: #48ff00; box-shadow: 0 0 10px #48ff00; }
+    37.5% { border-color: #ffff00; box-shadow: 0 0 10px #ffff00; }
+    50% { border-color: #ff8c00; box-shadow: 0 0 10px #ff8c00; }
+    62.5% { border-color: #9400d3; box-shadow: 0 0 10px #9400d3; }
+    75% { border-color: #ff0000; box-shadow: 0 0 10px #ff0000; }
+    87.5% { border-color: #0000ff; box-shadow: 0 0 10px #0000ff; }
+    100% { border-color: #00f7ff; box-shadow: 0 0 10px #00f7ff; }
+}
+
+.quiz-card {
+    background: linear-gradient(145deg, #0f2027, #203a43, #2c5364); 
+    padding: 20px; 
+    margin: 15px 0; 
+    border-radius: 15px; 
+    border: 3px solid #00f7ff; 
+    animation: rgb-8-glow 6s linear infinite;
+}
+
+.opt-btn {
+    display: block; 
+    width: 100%; 
+    margin: 10px 0; 
+    padding: 14px; 
+    background: rgba(255,255,255,0.05); 
+    color: #fff; 
+    border: 2px solid #00f7ff; 
+    border-radius: 10px; 
+    text-align: left; 
+    font-weight: 600; 
+    cursor: pointer;
+    animation: rgb-8-glow 5s linear infinite;
+}
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+const questions = [
+    {q:"Work done to move a charge of 2C through a potential difference of 5V is:",opts:["10 J","2.5 J","0.4 J","7 J"],ans:0},
+    {q:"If 'n' capacitors are connected in series, the equivalent capacitance is:",opts:["nC","C/n","n²C","C/n²"],ans:1},
+    {q:"The energy stored in a capacitor of capacitance C and potential V is:",opts:["CV²","1/2 CV²","C²V","1/2 C²V"],ans:1},
+    {q:"When a dielectric slab is inserted into a capacitor, its capacitance:",opts:["Decreases","Increases","Remains same","Becomes zero"],ans:1},
+    {q:"Equipotential surfaces for a point charge are:",opts:["Planes","Spheres","Cylinders","Ellipses"],ans:1},
+    {q:"Potential at a point due to a dipole on its equatorial line is:",opts:["Maximum","Minimum","Zero","Infinite"],ans:2},
+    {q:"Unit of electric potential gradient is:",opts:["V-m","V/m","V/m²","C/V"],ans:1},
+    {q:"In series combination of capacitors, which quantity remains same?",opts:["Potential","Charge","Energy","Capacitance"],ans:1},
+    {q:"Dimensional formula of electric potential is:",opts:["[ML²T⁻³A⁻¹]","[ML²T⁻²A⁻¹]","[MLT⁻³A⁻¹]","[M⁻¹L⁻²T⁴A²]"],ans:0},
+    {q:"Potential inside a charged hollow spherical conductor is:",opts:["Zero","Same as on surface","Infinite","Variable"],ans:1},
+    {q:"Capacitance of a parallel plate capacitor is C =:",opts:["ε₀A/d","ε₀d/A","A/ε₀d","Ad/ε₀"],ans:0},
+    {q:"The SI unit of capacitance is:",opts:["Volt","Ohm","Farad","Henry"],ans:2},
+    {q:"Dielectric constant of a metal is:",opts:["Zero","One","Infinite","Ten"],ans:2},
+    {q:"One electron volt (eV) is equal to:",opts:["1.6 x 10⁻¹⁹ J","3.2 x 10⁻¹⁹ J","1 J","9.1 x 10⁻³¹ J"],ans:0},
+    {q:"Potential V and field E are related as:",opts:["E = dV/dr","E = -dV/dr","V = dE/dr","V = -dE/dr"],ans:1},
+    {q:"Energy density between plates of a capacitor is proportional to:",opts:["E","E²","1/E","√E"],ans:1},
+    {q:"Earth's potential is taken to be:",opts:["Maximum","Zero","Negative","100 V"],ans:1},
+    {q:"If the distance between plates is halved, capacitance becomes:",opts:["Half","Double","Four times","Same"],ans:1},
+    {q:"Van de Graaff generator is used to generate:",opts:["High Current","High Voltage","Low Voltage","Direct Current"],ans:1},
+    {q:"The work done in moving a charge on an equipotential surface is:",opts:["Maximum","Zero","Minimum","Negative"],ans:1},
+    {q:"Polar molecules have ______ permanent dipole moment.",opts:["Zero","Non-zero","Infinite","Negative"],ans:1},
+    {q:"If three 3μF capacitors are in series, net capacitance is:",opts:["9 μF","1 μF","3 μF","6 μF"],ans:1},
+    {q:"The ratio of charge to potential difference is called:",opts:["Resistance","Inductance","Capacitance","Flux"],ans:2},
+    {q:"Potential due to a point charge varies with distance 'r' as:",opts:["1/r","1/r²","r","Log r"],ans:0},
+    {q:"When two capacitors are connected in parallel, they have same:",opts:["Charge","Potential","Energy","Capacitance"],ans:1},
+    {q:"Dielectric strength of air is approx:",opts:["3 x 10⁶ V/m","1 x 10³ V/m","Zero","Infinite"],ans:0},
+    {q:"If area of plates is doubled, capacitance becomes:",opts:["Double","Half","Four times","Same"],ans:0},
+    {q:"Loss of energy during sharing of charges between capacitors is given by:",opts:["1/2 C V²","Heat/Spark","Magnetic flux","Zero"],ans:1},
+    {q:"1 Farad is equal to:",opts:["1 C/V","1 V/C","1 J/C","1 N/C"],ans:0},
+    {q:"Potential energy of two charges q₁ and q₂ is:",opts:["kq₁q₂/r","kq₁q₂/r²","1/2 kq₁q₂/r","Zero"],ans:0},
+    {q:"Which of the following is NOT a unit of potential?",opts:["Volt","J/C","W/A","N/C"],ans:3},
+    {q:"If n identical capacitors are in parallel, the net capacitance is:",opts:["nC","C/n","n²C","C/n²"],ans:0},
+    {q:"A capacitor blocks ______ and allows ______ to pass:",opts:["AC, DC","DC, AC","Both","Neither"],ans:1},
+    {q:"Capacitance of Earth is approx:",opts:["1 F","711 μF","9 x 10⁹ F","1 μF"],ans:1},
+    {q:"In a region of constant potential, electric field is:",opts:["Maximum","Zero","Uniform","Infinite"],ans:1},
+    {q:"Work done to bring a charge from infinity to a point is called:",opts:["Electric field","Potential","Flux","Capacitance"],ans:1},
+    {q:"If V = 20V and C = 2μF, then charge Q is:",opts:["10 μC","40 μC","0.1 μC","22 μC"],ans:1},
+    {q:"An equipotential surface is ______ to electric field lines.",opts:["Parallel","Perpendicular","At 45°","Opposite"],ans:1},
+    {q:"Sharing of charges between two capacitors results in a common ______:",opts:["Charge","Potential","Energy","Capacitance"],ans:1},
+    {q:"Non-polar molecules have ______ permanent dipole moment.",opts:["Zero","Non-zero","High","Low"],ans:0},
+    {q:"Capacitance of a spherical conductor of radius R is:",opts:["4πε₀R","R/4πε₀","4πε₀R²","Zero"],ans:0},
+    {q:"Electrostatic potential is a ______ quantity.",opts:["Vector","Scalar","Tensor","Dimensionless"],ans:1},
+    {q:"If a capacitor is charged and battery is removed, then slab is inserted, Q ______:",opts:["Increases","Decreases","Remains same","Doubles"],ans:2},
+    {q:"Potential at a point due to a dipole varies as:",opts:["1/r","1/r²","1/r³","r"],ans:1},
+    {q:"The unit of energy density is:",opts:["J/m³","J/m²","J/m","J-m"],ans:0},
+    {q:"Force between plates of a capacitor is proportional to:",opts:["Q²","Q","1/Q","√Q"],ans:0},
+    {q:"If V increases, capacitance C of a given capacitor ______:",opts:["Increases","Decreases","Remains same","Becomes zero"],ans:2},
+    {q:"Capacity of a capacitor is NOT affected by:",opts:["Area","Distance","Charge","Medium"],ans:2},
+    {q:"Dimensional formula of Capacitance is:",opts:["[M⁻¹L⁻²T⁴A²]","[ML²T⁻³A⁻¹]","[MLT⁻²]","[M⁻¹L⁻³T⁴A²]"],ans:0},
+    {q:"Angle between equipotential surface and E-field is:",opts:["0°","90°","180°","60°"],ans:1}
+];
+
+const quizBox = document.getElementById('quiz-box');
+
+questions.forEach((item, index) => {
+    let card = document.createElement('div');
+    card.className = "quiz-card";
+    card.innerHTML = `<p style="color:#00ffcc; font-size:18px; font-weight:bold;">Q${index+101}. ${item.q}</p>`;
+
+    item.opts.forEach((opt, oIdx) => {
+        let btn = document.createElement('button');
+        btn.innerText = opt;
+        btn.className = "opt-btn";
+
+        btn.onclick = () => {
+            const overlay = document.getElementById('quiz-overlay');
+            const title = document.getElementById('status-title');
+            const msg = document.getElementById('status-message');
+            const nxt = document.getElementById('next-msg');
+            const strip = document.getElementById('status-strip');
+
+            overlay.style.display = "flex";
+            overlay.style.pointerEvents = "auto"; 
+
+            if(oIdx === item.ans){
+                overlay.style.background = "rgba(0,0,0,0.85)";
+                strip.style.background = "transparent";
+                title.style.cssText = "font-family:'Dancing Script', cursive; color:#fff; font-size:60px; text-shadow:0 0 20px #00f7ff, 0 0 40px #00f7ff;";
+                title.innerText = "Physics Master";
+                msg.innerText = "Chapter 2 ke king ho tum! Trap fail ho gaya.";
+                msg.style.color = "#00f7ff";
+                nxt.innerText = "Charging for next question...";
+
+                var end = Date.now() + 1500;
+                var colors = ['#00f7ff','#ff00c8','#48ff00','#ffff00','#ff8c00','#9400d3','#ff0000','#0000ff'];
+                (function frame(){
+                    confetti({particleCount:15,angle:60,spread:65,origin:{x:0},colors:colors, zIndex: 999999});
+                    confetti({particleCount:15,angle:120,spread:65,origin:{x:1},colors:colors, zIndex: 999999});
+                    if(Date.now() < end) requestAnimationFrame(frame);
+                })();
+            } else {
+                overlay.style.background = "radial-gradient(rgba(139,0,0,0.5) 10%, rgba(0,0,0,0.85) 90%)";
+                strip.style.background = "rgba(0,0,0,0.6)";
+                strip.style.width = "100%";
+                strip.style.padding = "30px 0";
+                title.style.cssText = "font-family:'Oswald', sans-serif; color:red; font-size:80px; font-weight:900; letter-spacing:10px; text-shadow:4px 4px 0px #000;";
+                title.innerText = "WASTED";
+                msg.innerText = "Capacitance leak ho gayi! Thoda aur padho.";
+                msg.style.color = "#fff";
+                nxt.innerText = "";
+            }
+
+            setTimeout(() => {
+                overlay.style.display = "none";
+                overlay.style.pointerEvents = "none"; 
+            }, 2500);
+        };
+        card.appendChild(btn);
+    });
+    quizBox.appendChild(card);
+});
+});
+</script>
+</div>
+    
 <style>
     .smart-study-container { background: #080808; color: #e0e0e0; padding: 15px; font-family: 'Segoe UI', sans-serif; }
     .q-card { background: #111; border-radius: 12px; padding: 20px; margin-bottom: 25px; border-left: 4px solid #00f7ff; box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
