@@ -1039,6 +1039,179 @@ questions.forEach((item, index) => {
 });
 });
 </script>
+<div style="text-align:center; margin-bottom:20px;">
+    <h1 style="color:#00f7ff; font-family:sans-serif; text-transform:uppercase; text-shadow:0 0 15px #00f7ff;">Topper's Trap: Q101 - Q150 (EM Waves)</h1>
+    <p style="color:#ffffff; font-family:sans-serif; font-weight:bold;">Level: Ultra Hard | 1 bhi galat matlab game over!</p>
+</div>
+
+<div id="quiz-box" style="max-width:600px; margin:auto; position:relative; z-index:1;"></div>
+
+<div id="quiz-overlay" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; z-index:9999; flex-direction:column; align-items:center; justify-content:center; pointer-events:none;">
+    <div id="status-strip" style="width:100%; text-align:center; padding:30px 0;">
+        <h1 id="status-title"></h1>
+        <p id="status-message" style="font-weight:bold;"></p>
+        <p id="next-msg"></p>
+    </div>
+</div>
+
+<style>
+@keyframes rgb-8-glow {
+    0% { border-color: #00f7ff; box-shadow: 0 0 10px #00f7ff; }
+    25% { border-color: #ff00c8; box-shadow: 0 0 10px #ff00c8; }
+    50% { border-color: #48ff00; box-shadow: 0 0 10px #48ff00; }
+    75% { border-color: #ffff00; box-shadow: 0 0 10px #ffff00; }
+    100% { border-color: #00f7ff; box-shadow: 0 0 10px #00f7ff; }
+}
+
+.quiz-card {
+    background: linear-gradient(145deg, #0f2027, #203a43, #2c5364); 
+    padding: 20px; 
+    margin: 15px 0; 
+    border-radius: 15px; 
+    border: 3px solid #00f7ff; 
+    animation: rgb-8-glow 6s linear infinite;
+}
+
+.opt-btn {
+    display: block; 
+    width: 100%; 
+    margin: 10px 0; 
+    padding: 14px; 
+    background: rgba(255,255,255,0.05); 
+    color: #fff; 
+    border: 2px solid #00f7ff; 
+    border-radius: 10px; 
+    text-align: left; 
+    font-weight: 600; 
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.opt-btn:hover {
+    background: rgba(0, 247, 255, 0.2);
+}
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+const questions = [
+    {q:"Displacement current flows in the region where electric field is:",opts:["Constant","Decreasing only","Increasing only","Changing with time"],ans:3},
+    {q:"The ratio of amplitude of B-field to E-field in vacuum is:",opts:["c","1/c","c²","√c"],ans:1},
+    {q:"Which component of EM wave is responsible for optical effects?",opts:["Magnetic field","Electric field","Both","None"],ans:1},
+    {q:"An EM wave of intensity I falls on a non-reflecting surface. Pressure is:",opts:["I/c","2I/c","I/c²","Ic"],ans:0},
+    {q:"The velocity of EM waves in a medium of ε and μ is:",opts:["1/√(εμ)","√(μ/ε)","εμ","√(ε/μ)"],ans:0},
+    {q:"Wavelength of X-rays is of the order of:",opts:["10⁻⁶ m","10⁻¹⁰ m","10⁻¹² m","10⁻⁸ m"],ans:1},
+    {q:"If E = E₀ sin(kz - ωt), then the direction of propagation is:",opts:["+x axis","+y axis","+z axis","-z axis"],ans:2},
+    {q:"The source of EM waves is:",opts:["Charge at rest","Charge in uniform motion","Accelerated charge","Neutral particle"],ans:2},
+    {q:"Which has the highest frequency?",opts:["Gamma rays","UV rays","Microwaves","Radio waves"],ans:0},
+    {q:"Ozone layer absorbs:",opts:["Infrared","Visible light","UV radiation","X-rays"],ans:2},
+    {q:"In an EM wave, the phase difference between E and B is:",opts:["0","π/2","π","π/4"],ans:0},
+    {q:"The Greenhouse effect is mainly due to:",opts:["UV rays","Infrared rays","X-rays","Radio waves"],ans:1},
+    {q:"Average energy density of B-field in vacuum is:",opts:["B₀²/2μ₀","B₀²/μ₀","μ₀B₀²/2","B₀/2μ₀"],ans:0},
+    {q:"A capacitor is charging. The total current between plates is:",opts:["Conduction current","Displacement current","Zero","Both"],ans:1},
+    {q:"Ratio of E₀/B₀ for an EM wave in a medium (n=1.5) is:",opts:["3×10⁸ m/s","2×10⁸ m/s","4.5×10⁸ m/s","1.5×10⁸ m/s"],ans:1},
+    {q:"Which rays are used to kill cancer cells?",opts:["Infrared","UV","Gamma rays","Microwaves"],ans:2},
+    {q:"Wavelength range of visible light is:",opts:["400nm - 700nm","1nm - 100nm","700nm - 1mm","0.1nm - 10nm"],ans:0},
+    {q:"EM waves transport:",opts:["Charge","Mass","Energy and Momentum","None"],ans:2},
+    {q:"Frequency of EM wave is 30 MHz. Wavelength in vacuum is:",opts:["10 m","1 m","100 m","0.1 m"],ans:0},
+    {q:"Which EM wave is used in RADAR?",opts:["X-rays","Microwaves","Infrared","UV"],ans:1},
+    {q:"In EM wave, E and B are:",opts:["Parallel","Antiparallel","Perpendicular","Random"],ans:2},
+    {q:"Maxwell's Equations are based on:",opts:["Newton's laws","Laws of Electromagnetism","Relativity","Thermodynamics"],ans:1},
+    {q:"Wavelength of Microwaves is ______ than UV rays.",opts:["Smaller","Greater","Equal","Half"],ans:1},
+    {q:"To produce EM wave of λ=1m, we need LC circuit of frequency:",opts:["3×10⁸ Hz","300 MHz","30 MHz","3 GHz"],ans:1},
+    {q:"Direction of Poynting vector gives direction of:",opts:["E-field","B-field","Energy flow","Charge flow"],ans:2},
+    {q:"In vacuum, all EM waves have same:",opts:["Wavelength","Frequency","Speed","Amplitude"],ans:2},
+    {q:"Which is used in Satellite communication?",opts:["Ground waves","Space waves","Microwaves","X-rays"],ans:2},
+    {q:"EM waves are ______ in nature.",opts:["Longitudinal","Transverse","Stationary","Mechanical"],ans:1},
+    {q:"The dimension of 1/√(μ₀ε₀) is same as:",opts:["Acceleration","Force","Velocity","Energy"],ans:2},
+    {q:"If a surface reflects 100% light, the pressure is:",opts:["I/c","2I/c","Zero","I/2c"],ans:1},
+    {q:"Which part of spectrum is called 'Heat waves'?",opts:["UV","X-rays","Infrared","Microwaves"],ans:2},
+    {q:"Water molecules in food vibrate due to:",opts:["Radio waves","Microwaves","Infrared","UV"],ans:1},
+    {q:"According to Maxwell, changing Electric field produces:",opts:["Electric current","Magnetic field","Gravity","Mass"],ans:1},
+    {q:"The speed of EM wave depends on:",opts:["Intensity","Frequency","Medium properties","Source speed"],ans:2},
+    {q:"Which rays are used in 'LASIK' eye surgery?",opts:["Gamma","Infrared","UV (Excimer laser)","Microwaves"],ans:2},
+    {q:"Total energy density of EM wave is:",opts:["ε₀E²","1/2 ε₀E²","2ε₀E²","ε₀E²/4"],ans:0},
+    {q:"Which has the shortest wavelength?",opts:["Gamma rays","X-rays","UV","Blue light"],ans:0},
+    {q:"Radio waves are produced by:",opts:["Inner shell electrons","Nucleus","Rapid acceleration of charges in aerials","Hot bodies"],ans:2},
+    {q:"EM waves can be polarized. This proves they are:",opts:["Particle","Transverse","Longitudinal","Fast"],ans:1},
+    {q:"Infrared lamps are used in:",opts:["Physiotherapy","Photography in dark","Greenhouses","All of these"],ans:3},
+    {q:"Relation between E, B and v is:",opts:["E = Bv","B = Ev","v = EB","E = B/v"],ans:0},
+    {q:"Displacement current was introduced by:",opts:["Ampere","Faraday","Maxwell","Hertz"],ans:2},
+    {q:"Which wave is used to see through fog?",opts:["UV","Visible","Infrared","Gamma"],ans:2},
+    {q:"Amplitude of E-field is 6 V/m. Amplitude of B-field is:",opts:["2×10⁻⁸ T","18×10⁸ T","3×10⁸ T","None"],ans:0},
+    {q:"The waves used in TV remote control are:",opts:["Radio waves","Microwaves","Infrared","UV"],ans:2},
+    {q:"Electric field part of EM wave does work on charge? ",opts:["Yes","No","Only in vacuum","Only in metal"],ans:0},
+    {q:"Frequency of UV rays is ______ than X-rays.",opts:["Higher","Lower","Same","Double"],ans:1},
+    {q:"Speed of EM wave in a medium with n=2 is:",opts:["1.5×10⁸ m/s","3×10⁸ m/s","6×10⁸ m/s","2×10⁸ m/s"],ans:0},
+    {q:"Which of the following does NOT require a medium?",opts:["Sound waves","EM waves","Water waves","Seismic waves"],ans:1},
+    {q:"Unit of Displacement Current is:",opts:["Ampere/m²","Ampere","Volt","Tesla"],ans:1}
+];
+
+const quizBox = document.getElementById('quiz-box');
+
+questions.forEach((item, index) => {
+    let card = document.createElement('div');
+    card.className = "quiz-card";
+    card.innerHTML = `<p style="color:#00ffcc; font-size:18px; font-weight:bold;">Q${index+101}. ${item.q}</p>`;
+
+    item.opts.forEach((opt, oIdx) => {
+        let btn = document.createElement('button');
+        btn.innerText = opt;
+        btn.className = "opt-btn";
+
+        btn.onclick = () => {
+            const overlay = document.getElementById('quiz-overlay');
+            const title = document.getElementById('status-title');
+            const msg = document.getElementById('status-message');
+            const nxt = document.getElementById('next-msg');
+            const strip = document.getElementById('status-strip');
+
+            overlay.style.display = "flex";
+            overlay.style.pointerEvents = "auto"; 
+
+            if(oIdx === item.ans){
+                overlay.style.background = "rgba(0,0,0,0.85)";
+                strip.style.background = "transparent";
+                title.style.cssText = "font-family:'Dancing Script', cursive; color:#fff; font-size:60px; text-shadow:0 0 20px #00f7ff, 0 0 40px #00f7ff;";
+                title.innerText = "Physics Master";
+                msg.innerText = "Sahi Jawab! Concept ekdam crystal clear hai.";
+                msg.style.color = "#00f7ff";
+                nxt.innerText = "Chalo agle sawal par...";
+
+                var end = Date.now() + 1500;
+                var colors = ['#00f7ff','#ff00c8','#48ff00','#ffff00','#ff8c00','#9400d3','#ff0000','#0000ff'];
+                (function frame(){
+                    confetti({particleCount:15,angle:60,spread:65,origin:{x:0},colors:colors, zIndex: 999999});
+                    confetti({particleCount:15,angle:120,spread:65,origin:{x:1},colors:colors, zIndex: 999999});
+                    if(Date.now() < end) requestAnimationFrame(frame);
+                })();
+            } else {
+                overlay.style.background = "radial-gradient(rgba(139,0,0,0.5) 10%, rgba(0,0,0,0.85) 90%)";
+                strip.style.background = "rgba(0,0,0,0.6)";
+                strip.style.width = "100%";
+                strip.style.padding = "30px 0";
+                title.style.cssText = "font-family:'Oswald', sans-serif; color:red; font-size:80px; font-weight:900; letter-spacing:10px; text-shadow:4px 4px 0px #000;";
+                title.innerText = "WASTED";
+                msg.innerText = "Galat! Topper's Trap mein phans gaye.";
+                msg.style.color = "#fff";
+                nxt.innerText = "";
+            }
+
+            setTimeout(() => {
+                overlay.style.display = "none";
+                overlay.style.pointerEvents = "none"; 
+            }, 2000);
+        };
+        card.appendChild(btn);
+    });
+    quizBox.appendChild(card);
+});
+});
+</script>
+
 <div id="long-questions-ch8-full" style="max-width:800px; margin:auto; font-family:Arial, sans-serif;">
 
     <div style="background: linear-gradient(135deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8); background-size: 400% 400%; animation: moveBg 12s ease infinite; padding:20px; margin-bottom:20px; border-radius:20px; box-shadow: 0 10px 15px rgba(0,0,0,0.3);">
