@@ -113,6 +113,33 @@
     </style>
 </head>
 <body>
+    <div class="announcement-overlay" id="announcementOverlay">
+    <div class="announcement-banner">
+        <div class="confetti-layer"></div>
+        <div class="banner-content">
+            <span class="party-icon">🎉</span>
+            <p class="banner-text">Big Update Coming Soon! Something new is arriving for your upcoming tests in a few days. Stay tuned and get ready to ace it! <span class="rocket-icon">🚀</span></p>
+        </div>
+    </div>
+</div>
+
+<style>
+/* Overlay configuration to cover the fixed header */
+.announcement-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999999;
+    animation: slideDown 0.5s ease-out forwards;
+}
+
+/* Updated Colors: Website theme matching Neon Orange, Deep Violet & Cyan Gradient */
+.announcement-banner {
+    position: relative;
+    background: linear-gradient(135deg, #ff6a00, #ee0979, #111528, #00f7ff);
+    background-size: 300% 300%;
+
 
     <div class="header">
         <a href="index.html" class="back-btn">BACK</a>
